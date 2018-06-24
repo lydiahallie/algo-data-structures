@@ -1,5 +1,3 @@
-const array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
-
 function bubbleSort(array) {
   let swapped;
   do {
@@ -22,5 +20,3 @@ function bubbleSort(array) {
   // Return the array with the swapped values.
   return array;
 }
-
-console.log(bubbleSort(array)); // => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
