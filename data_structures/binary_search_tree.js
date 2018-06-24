@@ -132,8 +132,10 @@ class BinarySearchTree {
   }
 
   traverseDFS(fn, method) {
+    // Depth-first search.
     const current = this.root;
-    if(method) {
+    if (method) {
+      // Invoke method passed as arg on current node.
       this[`${method}`](current, fn);
     } else {
       this.preOrder(current, fn);
@@ -141,17 +143,23 @@ class BinarySearchTree {
   }
 
   traverseBFS(fn) {
+    // Breadth-first search.
+    // Check nodes on every *level* before going down.
     this.queue = [];
     this.queue.push(this.root);
-    while(this.queue.length) {
+    while (this.queue.length) {
+      // Node is equal to the first node in the queue.
       const node = this.queue.shift();
-      if(fn) {
+      // Invoke function on current node.
+      if (fn) {
         fn(node);
       }
-      if(node.left) {
+      // If the node has a left value, push that value to the queue.
+      if (node.left) {
         this.queue.push(node.left);
       }
-      if(node.right) {
+      // "" "" left = right.
+      if (node.right) {
         this.queue.push(node.right);
       }
     }
