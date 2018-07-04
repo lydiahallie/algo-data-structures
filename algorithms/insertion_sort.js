@@ -1,6 +1,6 @@
 function insertionSort(array) {
   // Loop over array.
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     // Declare a temporary variable equal to the current item's value.
     let temp = array[i];
     // Declare a variable equal to one index lower than the current item's index.
